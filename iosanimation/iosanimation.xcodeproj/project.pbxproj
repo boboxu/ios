@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F6F2D2E1BB9608700637C6F /* viewanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F2D2D1BB9608700637C6F /* viewanimationController.m */; settings = {ASSET_TAGS = (); }; };
 		4FCDF3A91BA8360D00E698B1 /* imageanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */; };
 		4FE699961BA830E00083FFDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699951BA830E00083FFDC /* main.m */; };
 		4FE699991BA830E00083FFDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699981BA830E00083FFDC /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F6F2D2C1BB9608700637C6F /* viewanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viewanimationController.h; path = subcontrollers/viewanimationController.h; sourceTree = "<group>"; };
+		4F6F2D2D1BB9608700637C6F /* viewanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = viewanimationController.m; path = subcontrollers/viewanimationController.m; sourceTree = "<group>"; };
 		4FCDF3A71BA8360D00E698B1 /* imageanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageanimationController.h; path = subcontrollers/imageanimationController.h; sourceTree = "<group>"; };
 		4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageanimationController.m; path = subcontrollers/imageanimationController.m; sourceTree = "<group>"; };
 		4FE699901BA830E00083FFDC /* iosanimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosanimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +71,8 @@
 			children = (
 				4FCDF3A71BA8360D00E698B1 /* imageanimationController.h */,
 				4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */,
+				4F6F2D2C1BB9608700637C6F /* viewanimationController.h */,
+				4F6F2D2D1BB9608700637C6F /* viewanimationController.m */,
 			);
 			name = subcontrollers;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				4FE6999C1BA830E00083FFDC /* ViewController.m in Sources */,
 				4FE699991BA830E00083FFDC /* AppDelegate.m in Sources */,
 				4FE699961BA830E00083FFDC /* main.m in Sources */,
+				4F6F2D2E1BB9608700637C6F /* viewanimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

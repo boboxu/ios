@@ -20,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     [self _buildData];
     [self _buildSubViews];
 }
@@ -32,7 +35,7 @@
 #pragma mark private
 -(void)_buildData
 {
-    _dataArray = [NSArray arrayWithObjects:@"imageanimation",nil];
+    _dataArray = [NSArray arrayWithObjects:@"imageanimation",@"viewanimation",nil];
 }
 
 -(void)_buildSubViews
