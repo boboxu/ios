@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F6F2D2E1BB9608700637C6F /* viewanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F2D2D1BB9608700637C6F /* viewanimationController.m */; settings = {ASSET_TAGS = (); }; };
 		4FCDF3A91BA8360D00E698B1 /* imageanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */; };
+		4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD20F991BB99A2B005B6775 /* logo.png */; settings = {ASSET_TAGS = (); }; };
+		4FD20F9E1BB99AA0005B6775 /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD20F9D1BB99AA0005B6775 /* ImageUtil.m */; settings = {ASSET_TAGS = (); }; };
 		4FE699961BA830E00083FFDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699951BA830E00083FFDC /* main.m */; };
 		4FE699991BA830E00083FFDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699981BA830E00083FFDC /* AppDelegate.m */; };
 		4FE6999C1BA830E00083FFDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6999B1BA830E00083FFDC /* ViewController.m */; };
@@ -33,6 +35,9 @@
 		4F6F2D2D1BB9608700637C6F /* viewanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = viewanimationController.m; path = subcontrollers/viewanimationController.m; sourceTree = "<group>"; };
 		4FCDF3A71BA8360D00E698B1 /* imageanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageanimationController.h; path = subcontrollers/imageanimationController.h; sourceTree = "<group>"; };
 		4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageanimationController.m; path = subcontrollers/imageanimationController.m; sourceTree = "<group>"; };
+		4FD20F991BB99A2B005B6775 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4FD20F9C1BB99AA0005B6775 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageUtil.h; path = util/ImageUtil.h; sourceTree = "<group>"; };
+		4FD20F9D1BB99AA0005B6775 /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageUtil.m; path = util/ImageUtil.m; sourceTree = "<group>"; };
 		4FE699901BA830E00083FFDC /* iosanimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosanimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE699941BA830E00083FFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE699951BA830E00083FFDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,9 +82,28 @@
 			name = subcontrollers;
 			sourceTree = "<group>";
 		};
+		4FD20F961BB999C3005B6775 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				4FD20F991BB99A2B005B6775 /* logo.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		4FD20F9B1BB99A85005B6775 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4FD20F9C1BB99AA0005B6775 /* ImageUtil.h */,
+				4FD20F9D1BB99AA0005B6775 /* ImageUtil.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		4FE699871BA830E00083FFDC = {
 			isa = PBXGroup;
 			children = (
+				4FD20F9B1BB99A85005B6775 /* util */,
+				4FD20F961BB999C3005B6775 /* resource */,
 				4FE699921BA830E00083FFDC /* iosanimation */,
 				4FE699AC1BA830E00083FFDC /* iosanimationTests */,
 				4FE699911BA830E00083FFDC /* Products */,
@@ -181,7 +205,7 @@
 		4FE699881BA830E00083FFDC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = rolandxu;
 				TargetAttributes = {
 					4FE6998F1BA830E00083FFDC = {
@@ -217,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */,
 				4FE6999F1BA830E00083FFDC /* Main.storyboard in Resources */,
 				4FE699A41BA830E00083FFDC /* LaunchScreen.xib in Resources */,
 				4FE699A11BA830E00083FFDC /* Images.xcassets in Resources */,
@@ -238,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCDF3A91BA8360D00E698B1 /* imageanimationController.m in Sources */,
+				4FD20F9E1BB99AA0005B6775 /* ImageUtil.m in Sources */,
 				4FE6999C1BA830E00083FFDC /* ViewController.m in Sources */,
 				4FE699991BA830E00083FFDC /* AppDelegate.m in Sources */,
 				4FE699961BA830E00083FFDC /* main.m in Sources */,
@@ -304,6 +330,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -369,6 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iosanimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rolandxu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -379,6 +407,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iosanimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rolandxu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -397,6 +426,7 @@
 				);
 				INFOPLIST_FILE = iosanimationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rolandxu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iosanimation.app/iosanimation";
 			};
@@ -412,6 +442,7 @@
 				);
 				INFOPLIST_FILE = iosanimationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "rolandxu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iosanimation.app/iosanimation";
 			};
