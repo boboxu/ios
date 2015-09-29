@@ -7,7 +7,7 @@
 //
 
 #import "imageanimationController.h"
-#import "ImageUtil.h"
+#import "UIImage+Extensions.h"
 
 @interface imageanimationController()
 {
@@ -42,20 +42,21 @@
 #pragma mark private
 -(void)_buildSubViews
 {
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self _configTopBar];
     
     _imageview = [[UIImageView alloc] init];
-    
+    _imageview.contentMode = UIViewContentModeCenter;
     _imageview.animationImages = [self _generateImages];
-    _imageview.animationDuration = 5;
-    _imageview.animationRepeatCount = 1;
+    _imageview.animationDuration = 1;
+    _imageview.animationRepeatCount = 0;
+    _imageview.clipsToBounds = YES;
     
     CGRect rect;
-    float w = 100,h=100;
+    float w = 250,h=250;
     rect.size = CGSizeMake(w, h);
     rect.origin = CGPointMake(CGRectGetMidX([UIScreen mainScreen].bounds)-w/2, CGRectGetMidY([UIScreen mainScreen].bounds)-h/2);
     _imageview.frame = rect;
-    
     [self.view addSubview:_imageview];
     [_imageview startAnimating];
 }
@@ -70,9 +71,9 @@
     UIImage *img = [UIImage imageNamed:@"logo"];
     NSMutableArray *images = [[NSMutableArray alloc]init];
     
-    for(float i=0;i<=2*M_PI;i+=2*M_PI/12)
+    for(float i=0;i<=360;i++)
     {
-        [images addObject:[ImageUtil rotationUIImage:img degrees:i]];
+        [images addObject:[img imageRotatedByDegrees:i]];
 //        [images addObject:[ImageUtil  imageRotatedByRadians:i]];
     }
     return images;
