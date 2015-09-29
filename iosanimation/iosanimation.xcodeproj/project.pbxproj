@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F6F2D2E1BB9608700637C6F /* viewanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6F2D2D1BB9608700637C6F /* viewanimationController.m */; settings = {ASSET_TAGS = (); }; };
+		4F3500831BBABF550005D508 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3500821BBABF550005D508 /* grid.png */; settings = {ASSET_TAGS = (); }; };
 		4F9D58D11BBA2C2D0031C038 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D58D01BBA2C2D0031C038 /* UIImage+Extensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F9D58E61BBA3AA60031C038 /* viewanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D58E51BBA3AA60031C038 /* viewanimationController.m */; settings = {ASSET_TAGS = (); }; };
 		4FCDF3A91BA8360D00E698B1 /* imageanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */; };
 		4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD20F991BB99A2B005B6775 /* logo.png */; settings = {ASSET_TAGS = (); }; };
 		4FE699961BA830E00083FFDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699951BA830E00083FFDC /* main.m */; };
@@ -31,10 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F6F2D2C1BB9608700637C6F /* viewanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viewanimationController.h; path = subcontrollers/viewanimationController.h; sourceTree = "<group>"; };
-		4F6F2D2D1BB9608700637C6F /* viewanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = viewanimationController.m; path = subcontrollers/viewanimationController.m; sourceTree = "<group>"; };
+		4F29FD0C1BBA5D57009CED0B /* iosanimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosanimation-Prefix.pch"; sourceTree = "<group>"; };
+		4F3500821BBABF550005D508 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
 		4F9D58CF1BBA2C2D0031C038 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Extensions.h"; path = "category/UIImage+Extensions.h"; sourceTree = "<group>"; };
 		4F9D58D01BBA2C2D0031C038 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Extensions.m"; path = "category/UIImage+Extensions.m"; sourceTree = "<group>"; };
+		4F9D58E41BBA3AA60031C038 /* viewanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = viewanimationController.h; path = subcontrollers/viewanimationController.h; sourceTree = "<group>"; };
+		4F9D58E51BBA3AA60031C038 /* viewanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = viewanimationController.m; path = subcontrollers/viewanimationController.m; sourceTree = "<group>"; };
 		4FCDF3A71BA8360D00E698B1 /* imageanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageanimationController.h; path = subcontrollers/imageanimationController.h; sourceTree = "<group>"; };
 		4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageanimationController.m; path = subcontrollers/imageanimationController.m; sourceTree = "<group>"; };
 		4FD20F991BB99A2B005B6775 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -85,8 +88,8 @@
 			children = (
 				4FCDF3A71BA8360D00E698B1 /* imageanimationController.h */,
 				4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */,
-				4F6F2D2C1BB9608700637C6F /* viewanimationController.h */,
-				4F6F2D2D1BB9608700637C6F /* viewanimationController.m */,
+				4F9D58E41BBA3AA60031C038 /* viewanimationController.h */,
+				4F9D58E51BBA3AA60031C038 /* viewanimationController.m */,
 			);
 			name = subcontrollers;
 			sourceTree = "<group>";
@@ -94,6 +97,7 @@
 		4FD20F961BB999C3005B6775 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				4F3500821BBABF550005D508 /* grid.png */,
 				4FD20F991BB99A2B005B6775 /* logo.png */,
 			);
 			path = resource;
@@ -139,6 +143,7 @@
 				4FE699A01BA830E00083FFDC /* Images.xcassets */,
 				4FE699A21BA830E00083FFDC /* LaunchScreen.xib */,
 				4FE699931BA830E00083FFDC /* Supporting Files */,
+				4F29FD0C1BBA5D57009CED0B /* iosanimation-Prefix.pch */,
 			);
 			path = iosanimation;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */,
+				4F3500831BBABF550005D508 /* grid.png in Resources */,
 				4FE6999F1BA830E00083FFDC /* Main.storyboard in Resources */,
 				4FE699A41BA830E00083FFDC /* LaunchScreen.xib in Resources */,
 				4FE699A11BA830E00083FFDC /* Images.xcassets in Resources */,
@@ -274,8 +280,8 @@
 				4FE6999C1BA830E00083FFDC /* ViewController.m in Sources */,
 				4FE699991BA830E00083FFDC /* AppDelegate.m in Sources */,
 				4FE699961BA830E00083FFDC /* main.m in Sources */,
-				4F6F2D2E1BB9608700637C6F /* viewanimationController.m in Sources */,
 				4F9D58D11BBA2C2D0031C038 /* UIImage+Extensions.m in Sources */,
+				4F9D58E61BBA3AA60031C038 /* viewanimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "iosanimation/iosanimation-Prefix.pch";
 				INFOPLIST_FILE = iosanimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rolandxu.$(PRODUCT_NAME:rfc1034identifier)";
@@ -413,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "iosanimation/iosanimation-Prefix.pch";
 				INFOPLIST_FILE = iosanimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rolandxu.$(PRODUCT_NAME:rfc1034identifier)";

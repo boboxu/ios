@@ -20,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     [self _buildSubViews];
 }
 
@@ -63,7 +66,7 @@
 
 -(void)_configTopBar
 {
-    self.navigationController.title = NSStringFromClass(self.class);
+    self.navigationItem.title = NSStringFromClass(self.class);
 }
 
 -(NSArray*)_generateImages

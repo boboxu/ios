@@ -1,0 +1,26 @@
+//
+//  iosanimation-prefix.pch
+//  iosanimation
+//
+//  Created by rolandxu on 9/29/15.
+//  Copyright © 2015 rolandxu. All rights reserved.
+//
+
+#ifndef iosanimation_prefix_h
+#define iosanimation_prefix_h
+
+#ifdef __OBJC__
+
+// 屏幕尺寸
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+//颜色设置,方式一
+#define RGBA(r,g,b,a)  [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+// 颜色设置，方式二
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#endif
+
+#endif /* iosanimation_prefix_h */
