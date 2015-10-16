@@ -15,6 +15,9 @@
     NSArray* _propertyArray;
     CGFloat _bottonPostionMaxY;
     UIView* _bottomView;//动画操作的View
+    NSValue* _oldValue;
+    NSString* _propertyname;
+    
 }
 @end
 
@@ -136,16 +139,16 @@
 #pragma mark event handler
 -(void)onClickProperty:(id)sender
 {
-    NSString* propertyname = [_propertyArray objectAtIndex:((UIButton*)sender).tag];
-    NSLog(@"%@",propertyname);
-    NSValue* oldvalue = [_bottomView valueForKey:propertyname]; //先保存老的数据，完事之后还原
-    NSLog(@"%@",oldvalue);
+    _propertyname = [_propertyArray objectAtIndex:((UIButton*)sender).tag];
+    NSLog(@"%@",_propertyname);
+    _oldValue = [_bottomView valueForKey:_propertyname]; //先保存老的数据，完事之后还原
+    NSLog(@"%@",_oldValue);
     
     CGRect oldFrame = _bottomView.frame;
     CGRect newFrame = oldFrame;
     id newValue;
-    if ([propertyname isEqualToString:@"frame"]) {
-        CGRect oldFrame = [oldvalue CGRectValue];
+    if ([_propertyname isEqualToString:@"frame"]) {
+        CGRect oldFrame = [_oldValue CGRectValue];
         CGFloat newWidth = CGRectGetWidth(oldFrame) / 2;
         CGFloat newHeight = CGRectGetHeight(oldFrame) / 2;
         CGFloat newPosX = (SCREEN_WIDTH - newWidth)/2;
@@ -153,44 +156,45 @@
         CGRect newFrame = CGRectMake(newPosX, newPosY, newWidth, newHeight);
         newValue = [NSValue valueWithCGRect:newFrame];
     }
-    else if([propertyname isEqualToString:@"bounds"])
+    else if([_propertyname isEqualToString:@"bounds"])
     {
-        CGRect oldBounds = [oldvalue CGRectValue];
+        CGRect oldBounds = [_oldValue CGRectValue];
         CGFloat newWidth = CGRectGetWidth(oldBounds) / 2;
         CGFloat newHeight = CGRectGetHeight(oldBounds) / 2;
         CGRect newFrame = CGRectMake(0, 0, newWidth, newHeight);
         newValue = [NSValue valueWithCGRect:newFrame];
     }
-    else if([propertyname isEqualToString:@"center"])
+    else if([_propertyname isEqualToString:@"center"])
     {
-        CGPoint oldCenter = [oldvalue CGPointValue];
+        CGPoint oldCenter = [_oldValue CGPointValue];
         CGFloat newPosX = oldCenter.x + 10;
-        CGFloat newPosY = oldCenter.y + 10;
+        CGFloat newPosY = oldCenter.y + 0;
         CGPoint newCenter = CGPointMake(newPosX, newPosY);
         newValue = [NSValue valueWithCGPoint:newCenter];
     }
-    else if([propertyname isEqualToString:@"transform"])
+    else if([_propertyname isEqualToString:@"transform"])
     {
-        CGAffineTransform oldtrans = [oldvalue CGAffineTransformValue];
+        CGAffineTransform oldtrans = [_oldValue CGAffineTransformValue];
         CGAffineTransform newtrans = CGAffineTransformScale(oldtrans, 0.5, 0.5);
         newValue = [NSValue valueWithCGAffineTransform:newtrans];
     }
-    else if([propertyname isEqualToString:@"alpha"])
+    else if([_propertyname isEqualToString:@"alpha"])
     {
-        CGFloat oldAlpha = [(NSNumber*)oldvalue floatValue];
+        CGFloat oldAlpha = [(NSNumber*)_oldValue floatValue];
         CGFloat newAplpha = oldAlpha/2.0;
         newValue = [NSNumber numberWithFloat:newAplpha];
     }
-    else if([propertyname isEqualToString:@"backgroundColor"])
+    else if([_propertyname isEqualToString:@"backgroundColor"])
     {
-        UIColor* color = (UIColor*)oldvalue;
-        const CGFloat* colorsarray = CGColorGetComponents( color.CGColor );
-        newValue = RGBA(colorsarray[0]/2, colorsarray[1]/2, colorsarray[2]/2, colorsarray[3]/2);
+//        UIColor* color = (UIColor*)_oldValue;
+//        const CGFloat* colorsarray = CGColorGetComponents( color.CGColor );
+//        newValue = RGBA(colorsarray[0]/2, colorsarray[1]/2, colorsarray[2]/2, colorsarray[3]/2);
+        newValue = RGBA(255.0f, 255.0f, 0.0f, 1.0f);
     }
-    else if([propertyname isEqualToString:@"contentStretch"])
+    else if([_propertyname isEqualToString:@"contentStretch"])
     {
         //这个设置固定，以及可以拉伸的区域，需要设置frame才能有可视效果的
-        CGRect cgrect = [oldvalue CGRectValue];
+        CGRect cgrect = [_oldValue CGRectValue];
         newValue = [NSValue valueWithCGRect:CGRectMake(CGRectGetMinX(cgrect)/2, CGRectGetMinX(cgrect)/2, CGRectGetWidth(cgrect) / 2, CGRectGetHeight(cgrect) / 2)];
 ////        CGRect oldBounds = [oldvalue CGRectValue];
 //        CGFloat newWidth = CGRectGetWidth(oldFrame) / 2;
@@ -198,13 +202,57 @@
 //        newFrame = CGRectMake(0, 0, newWidth, newHeight);
         
     }
+    
+    //UIViewAnimationWithBlocks
     [UIView animateWithDuration:2 animations:^{
-        [_bottomView setValue:newValue forKey:propertyname];
+        [_bottomView setValue:newValue forKey:_propertyname];
     } completion:^(BOOL finished) {
-        [_bottomView setValue:oldvalue forKey:propertyname];
+        [_bottomView setValue:_oldValue forKey:_propertyname];
     }];
     
+//    [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionRepeat animations:^{
+//        [_bottomView setValue:newValue forKey:_propertyname];
+//    } completion:^(BOOL finished) {
+//        [_bottomView setValue:_oldValue forKey:_propertyname];
+//    }];
+//    CGPoint center = _bottomView.center;
+//    [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0.2 initialSpringVelocity:20 options:UIViewAnimationOptionLayoutSubviews animations:^{
+////        [_bottomView setValue:newValue forKey:_propertyname];
+//        CGPoint newCenter = CGPointMake(center.x + 10, center.y);
+//        _bottomView.center = newCenter;
+//    } completion:^(BOOL finished) {
+//
+//    }];
     
+    
+    //UIViewAnimation
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:2];
+//    [UIView setAnimationDelegate:self];
+//    [UIView setAnimationDidStopSelector:@selector(_resetOldValue:)];
+//    //动画曲线
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+//    //动画，从右往左反转
+//    UIViewAnimationTransition transition;
+//    transition = UIViewAnimationTransitionFlipFromRight;
+//    [UIView setAnimationTransition: transition forView:_bottomView cache:YES];
+//    //反向重复10次
+////    [UIView setAnimationRepeatAutoreverses:YES];
+//    [UIView setAnimationRepeatCount:2];
+//    [_bottomView setValue:newValue forKey:_propertyname];
+//    [UIView commitAnimations];
+    
+    
+//    [self performSelector:@selector(_stopAnimation:) withObject:nil afterDelay:2.0];
 }
 
+-(void)_resetOldValue:(id)sender
+{
+    [_bottomView setValue:_oldValue forKey:_propertyname];
+}
+
+-(void)_stopAnimation:(id)sender
+{
+    [_bottomView.layer removeAllAnimations];
+}
 @end
