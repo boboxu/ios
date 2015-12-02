@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  iosanimation
+//  ios9feature
 //
-//  Created by rolandxu on 15/9/15.
-//  Copyright (c) 2015年 rolandxu. All rights reserved.
+//  Created by rolandxu on 11/18/15.
+//  Copyright © 2015 rolandxu. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "LinePoint.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self _testcode];
     return YES;
 }
 
@@ -42,11 +45,26 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(void) application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
-{
-    if (shortcutItem) {
-        NSLog(@"%@",shortcutItem.userInfo[@"url"]);
-    }
-}
 
+-(void)_testcode
+{
+    UITouchProperties p = UITouchPropertyAzimuth | UITouchPropertyAltitude;
+    NSNumber* expectedProperty = @(UITouchPropertyAltitude);
+//    if(!(p & [expectedProperty intValue]))
+//    {
+        p ^= [expectedProperty intValue];
+//    }
+    int i = 0;
+    i++;
+    
+    CGRect rect = CGRectMake(10, 10, 10, 10);
+    rect = CGRectInset(rect,1,1);
+    
+    PointType type = Updated;
+    if ((type & NeedsUpdate) || (type & Predicted)) {
+        int i = 0;
+        i++;
+    }
+    return;
+}
 @end

@@ -36,38 +36,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>熊熊</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>typebear</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>bear</string>
-            <key>UIApplicationShortcutItemUserInfo</key>
-            <dict>
-                <key>url</key>
-                <string>index</string>
-            </dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>logoshorticonbear.png</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>波波</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>bobo</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>typebobo</string>
-            <key>UIApplicationShortcutItemUserInfo</key>
-            <dict>
-                <key>url</key>
-                <string>http://123.123</string>
-            </dict>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>logoshorticonbobo.png</string>
-		</dict>
-	</array>
 </dict>
 </plist>

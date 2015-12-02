@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ios9feature/ios9feature.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:gcdexplore/gcdexplore.xcodeproj">
    </FileRef>
    <FileRef

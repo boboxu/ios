@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F3500831BBABF550005D508 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3500821BBABF550005D508 /* grid.png */; settings = {ASSET_TAGS = (); }; };
+		4F3500831BBABF550005D508 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3500821BBABF550005D508 /* grid.png */; };
 		4F9D58D11BBA2C2D0031C038 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D58D01BBA2C2D0031C038 /* UIImage+Extensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4F9D58E61BBA3AA60031C038 /* viewanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D58E51BBA3AA60031C038 /* viewanimationController.m */; settings = {ASSET_TAGS = (); }; };
+		4F9D58E61BBA3AA60031C038 /* viewanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D58E51BBA3AA60031C038 /* viewanimationController.m */; };
 		4FCDF3A91BA8360D00E698B1 /* imageanimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */; };
-		4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD20F991BB99A2B005B6775 /* logo.png */; settings = {ASSET_TAGS = (); }; };
+		4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD20F991BB99A2B005B6775 /* logo.png */; };
+		4FDE27CF1BF436F100573B85 /* shouye.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE27CD1BF436F100573B85 /* shouye.png */; };
+		4FDE27D31BF43AF100573B85 /* logoshorticonbear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE27D11BF43AF100573B85 /* logoshorticonbear.png */; };
+		4FDE27D41BF43AF100573B85 /* logoshorticonbobo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE27D21BF43AF100573B85 /* logoshorticonbobo.png */; };
 		4FE699961BA830E00083FFDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699951BA830E00083FFDC /* main.m */; };
 		4FE699991BA830E00083FFDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE699981BA830E00083FFDC /* AppDelegate.m */; };
 		4FE6999C1BA830E00083FFDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6999B1BA830E00083FFDC /* ViewController.m */; };
@@ -29,6 +32,13 @@
 			remoteGlobalIDString = 4FE6998F1BA830E00083FFDC;
 			remoteInfo = iosanimation;
 		};
+		4FF37E991BFC68C300CE87A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4FF37E7B1BFC688A00CE87A5;
+			remoteInfo = ios9feature;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +51,9 @@
 		4FCDF3A71BA8360D00E698B1 /* imageanimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageanimationController.h; path = subcontrollers/imageanimationController.h; sourceTree = "<group>"; };
 		4FCDF3A81BA8360D00E698B1 /* imageanimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageanimationController.m; path = subcontrollers/imageanimationController.m; sourceTree = "<group>"; };
 		4FD20F991BB99A2B005B6775 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4FDE27CD1BF436F100573B85 /* shouye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shouye.png; sourceTree = "<group>"; };
+		4FDE27D11BF43AF100573B85 /* logoshorticonbear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoshorticonbear.png; sourceTree = "<group>"; };
+		4FDE27D21BF43AF100573B85 /* logoshorticonbobo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoshorticonbobo.png; sourceTree = "<group>"; };
 		4FE699901BA830E00083FFDC /* iosanimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosanimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE699941BA830E00083FFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE699951BA830E00083FFDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +67,7 @@
 		4FE699A91BA830E00083FFDC /* iosanimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosanimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE699AE1BA830E00083FFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE699AF1BA830E00083FFDC /* iosanimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosanimationTests.m; sourceTree = "<group>"; };
+		4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ios9feature.xcodeproj; path = ../ios9feature/ios9feature.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,9 @@
 		4FD20F961BB999C3005B6775 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				4FDE27D11BF43AF100573B85 /* logoshorticonbear.png */,
+				4FDE27D21BF43AF100573B85 /* logoshorticonbobo.png */,
+				4FDE27CD1BF436F100573B85 /* shouye.png */,
 				4F3500821BBABF550005D508 /* grid.png */,
 				4FD20F991BB99A2B005B6775 /* logo.png */,
 			);
@@ -113,6 +130,7 @@
 		4FE699871BA830E00083FFDC = {
 			isa = PBXGroup;
 			children = (
+				4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */,
 				4F9D58CE1BBA2BD30031C038 /* category */,
 				4FD20F9B1BB99A85005B6775 /* util */,
 				4FD20F961BB999C3005B6775 /* resource */,
@@ -174,6 +192,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FF37E961BFC68C300CE87A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FF37E9A1BFC68C300CE87A5 /* ios9feature.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +249,7 @@
 				TargetAttributes = {
 					4FE6998F1BA830E00083FFDC = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Q8F3NEZ66S;
 					};
 					4FE699A81BA830E00083FFDC = {
 						CreatedOnToolsVersion = 6.4;
@@ -241,6 +268,12 @@
 			mainGroup = 4FE699871BA830E00083FFDC;
 			productRefGroup = 4FE699911BA830E00083FFDC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4FF37E961BFC68C300CE87A5 /* Products */;
+					ProjectRef = 4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4FE6998F1BA830E00083FFDC /* iosanimation */,
@@ -249,16 +282,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		4FF37E9A1BFC68C300CE87A5 /* ios9feature.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ios9feature.app;
+			remoteRef = 4FF37E991BFC68C300CE87A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		4FE6998E1BA830E00083FFDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDE27CF1BF436F100573B85 /* shouye.png in Resources */,
+				4FDE27D31BF43AF100573B85 /* logoshorticonbear.png in Resources */,
 				4FD20F9A1BB99A2B005B6775 /* logo.png in Resources */,
 				4F3500831BBABF550005D508 /* grid.png in Resources */,
 				4FE6999F1BA830E00083FFDC /* Main.storyboard in Resources */,
 				4FE699A41BA830E00083FFDC /* LaunchScreen.xib in Resources */,
 				4FE699A11BA830E00083FFDC /* Images.xcassets in Resources */,
+				4FDE27D41BF43AF100573B85 /* logoshorticonbobo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -408,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "iosanimation/iosanimation-Prefix.pch";
 				INFOPLIST_FILE = iosanimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -420,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "iosanimation/iosanimation-Prefix.pch";
 				INFOPLIST_FILE = iosanimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
