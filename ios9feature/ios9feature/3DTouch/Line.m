@@ -182,7 +182,7 @@
         CGContextSetLineWidth(context, point.magnitude);
         CGContextStrokePath(context);
         
-        NSLog(@"%f %f %f %f",priorLocation.x,priorLocation.y,location.x,location.y);
+//        NSLog(@"%f %f %f %f",priorLocation.x,priorLocation.y,location.x,location.y);
         // Draw azimuith and elevation on all non-coalesced points when debugging.
         if (isDebuggingEnabled && !(pointType & Coalesced) && !(pointType & Predicted) && !(pointType & Finger))
         {

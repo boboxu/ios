@@ -35,7 +35,18 @@
     [_canvasView setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:_canvasView];
     
+    UIButton* btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setBackgroundColor:[UIColor redColor]];
+    [btn setFrame:CGRectMake(0, 20, [[UIScreen mainScreen] bounds].size.width, 30)];
+    [btn setTitle:@"Clear" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    
+    [btn addTarget:self action:@selector(onClickClear:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(void)onClickClear:(id)sender
+{
+    [_canvasView clear];
+}
 
 @end

@@ -9,6 +9,7 @@
 #import "TouchView.h"
 #import "Line.h"
 @interface TouchView()
+
 @property (nonatomic,assign) BOOL isPredictionEnabled ;
 @property (nonatomic,assign) BOOL isTouchUpdatingEnabled;
 @property (nonatomic,assign) BOOL usePreciseLocations;
@@ -19,7 +20,7 @@
 @property (nonatomic,retain) NSMutableArray* lines;
 @property (nonatomic,retain) NSMutableArray* finishedLines;
 @property (nonatomic,assign) CGImageRef frozenImage;
-
+@property (nonatomic,assign) CGContextRef frozenContext;
 @end
 
 @implementation TouchView
@@ -55,22 +56,32 @@
 
 -(CGContextRef) frozenContext
 {
-    short scale = self.window.screen.scale;
-    CGSize size = self.bounds.size;
-    
-    size.width *= scale;
-    size.height *= scale;
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
-    CGContextRef context = CGBitmapContextCreate(nil, size.width, size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
-    
-    CGContextSetLineCap(context, kCGLineCapRound);
-    CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
-    CGContextConcatCTM(context, transform);
-    
-    return context;
+    if (_frozenContext == nil) {
+        short scale = self.window.screen.scale;
+        CGSize size = self.bounds.size;
+        
+        size.width *= scale;
+        size.height *= scale;
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        
+        _frozenContext = CGBitmapContextCreate(nil, size.width, size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+        
+        CGColorSpaceRelease(colorSpace);
+        CGContextSetLineCap(_frozenContext, kCGLineCapRound);
+        CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
+        CGContextConcatCTM(_frozenContext, transform);
+    }
+    return _frozenContext;
 }
 
+-(CGImageRef) frozenImage
+{
+    if (_frozenImage == nil) {
+        
+        _frozenImage = CGBitmapContextCreateImage([self frozenContext]);
+    }
+    return _frozenImage;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -86,36 +97,30 @@
 #pragma mark override
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touchesMoved");
     [self drawTouches:touches withEvent:event];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touchesBegan");
     [self drawTouches:touches withEvent:event];
 }
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touchesEnded");
     [self drawTouches:touches withEvent:event];
     [self endTouches:touches cancel:NO];
 }
 
 -(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touchesCancelled");
     if (!touches) {
         return;
     }
-    
     [self endTouches:touches cancel:YES];
 }
 
 -(void)touchesEstimatedPropertiesUpdated:(NSSet *)touches
 {
-    NSLog(@"touchesEstimatedPropertiesUpdated");
     [self updateEstimatedPropertiesForTouches:touches];
 }
 
@@ -140,11 +145,8 @@
         self.needsFullRedraw = NO;
     }
     
-    self.frozenImage = self.frozenImage ? self.frozenImage:CGBitmapContextCreateImage([self frozenContext]);
     
-    if ([self frozenImage]) {
-        CGContextDrawImage(context, self.bounds, self.frozenImage);
-    }
+    CGContextDrawImage(context, self.bounds, self.frozenImage);
     
     for(Line* line in self.lines)
     {
@@ -154,7 +156,8 @@
 
 -(void) setFrozenImageNeedsUpdate
 {
-    self.frozenImage = nil;
+    CGImageRelease(_frozenImage);
+    _frozenImage = nil;
 }
 
 #pragma mark Actions
@@ -209,7 +212,6 @@
         }
     }
     
-//    NSLog(@"%f %f %f %f",updateRect.origin.x,updateRect.origin.y,updateRect.size.width,updateRect.size.height);
     [self setNeedsDisplayInRect:updateRect];
 }
 

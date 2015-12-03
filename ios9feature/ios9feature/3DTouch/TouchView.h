@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TouchView : UIView
-
+-(void) clear;
 -(void)drawTouches:(NSSet<UITouch *> *)touches withEvent:(UIEvent*)event;
 -(void)endTouches:(NSSet<UITouch *> *)touches cancel:(BOOL)cancel;
 @end
