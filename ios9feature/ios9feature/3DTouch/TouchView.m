@@ -36,6 +36,7 @@
         self.isTouchUpdatingEnabled = YES;
         self.isPredictionEnabled = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
         self.needsFullRedraw = true;
+        self.multipleTouchEnabled = YES;
     }
     return self;
 }
@@ -273,7 +274,7 @@
         }
             
         if ([line isComplete] || !self.isTouchUpdatingEnabled) {
-                [self finishLine:line];
+            [self finishLine:line];
         }
         else
         {

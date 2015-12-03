@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LinePoint.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [self _buildController];
     [self _testcode];
     return YES;
 }
@@ -45,6 +46,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)_buildController
+{
+    UINavigationController* naviController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+    self.window.rootViewController = naviController;
+}
 
 -(void)_testcode
 {
