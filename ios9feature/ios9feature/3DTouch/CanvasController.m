@@ -19,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     [self _buildSubViews];
+    [self setTitle:@"Touch With Force"];
     // Do any additional setup after loading the view.
 }
 
@@ -40,13 +46,13 @@
 
 -(void)_buildSubViews
 {
-    _canvasView = [[TouchView alloc] initWithFrame:CGRectMake(0, 64+30, self.view.frame.size.width,self.view.frame.size.height - 64+30)];
+    _canvasView = [[TouchView alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width,self.view.frame.size.height - 30)];
     [_canvasView setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:_canvasView];
     
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn setBackgroundColor:[UIColor redColor]];
-    [btn setFrame:CGRectMake(0, 64, [[UIScreen mainScreen] bounds].size.width, 30)];
+    [btn setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 30)];
     [btn setTitle:@"Clear" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     

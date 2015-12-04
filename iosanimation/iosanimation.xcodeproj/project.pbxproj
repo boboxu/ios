@@ -32,13 +32,6 @@
 			remoteGlobalIDString = 4FE6998F1BA830E00083FFDC;
 			remoteInfo = iosanimation;
 		};
-		4FF37E991BFC68C300CE87A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4FF37E7B1BFC688A00CE87A5;
-			remoteInfo = ios9feature;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +60,6 @@
 		4FE699A91BA830E00083FFDC /* iosanimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosanimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE699AE1BA830E00083FFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE699AF1BA830E00083FFDC /* iosanimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosanimationTests.m; sourceTree = "<group>"; };
-		4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ios9feature.xcodeproj; path = ../ios9feature/ios9feature.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +122,6 @@
 		4FE699871BA830E00083FFDC = {
 			isa = PBXGroup;
 			children = (
-				4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */,
 				4F9D58CE1BBA2BD30031C038 /* category */,
 				4FD20F9B1BB99A85005B6775 /* util */,
 				4FD20F961BB999C3005B6775 /* resource */,
@@ -190,14 +181,6 @@
 				4FE699AE1BA830E00083FFDC /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4FF37E961BFC68C300CE87A5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4FF37E9A1BFC68C300CE87A5 /* ios9feature.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,12 +251,6 @@
 			mainGroup = 4FE699871BA830E00083FFDC;
 			productRefGroup = 4FE699911BA830E00083FFDC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4FF37E961BFC68C300CE87A5 /* Products */;
-					ProjectRef = 4FF37E951BFC68C300CE87A5 /* ios9feature.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4FE6998F1BA830E00083FFDC /* iosanimation */,
@@ -281,16 +258,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4FF37E9A1BFC68C300CE87A5 /* ios9feature.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ios9feature.app;
-			remoteRef = 4FF37E991BFC68C300CE87A5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4FE6998E1BA830E00083FFDC /* Resources */ = {
