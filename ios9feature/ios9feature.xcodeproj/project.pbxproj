@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F46B82A1C10574400592459 /* CanvasController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F46B8291C10574400592459 /* CanvasController.m */; };
 		4F46B82D1C10576200592459 /* PreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F46B82C1C10576200592459 /* PreviewController.m */; };
+		4F46B8541C113B0E00592459 /* s5391_420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F46B8531C113B0E00592459 /* s5391_420.jpg */; };
 		4FF37EA91BFC68EA00CE87A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF37EA81BFC68EA00CE87A5 /* main.m */; };
 		4FF37EAC1BFC68EA00CE87A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF37EAB1BFC68EA00CE87A5 /* AppDelegate.m */; };
 		4FF37EAF1BFC68EA00CE87A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF37EAE1BFC68EA00CE87A5 /* ViewController.m */; };
@@ -24,6 +25,7 @@
 		4F46B8291C10574400592459 /* CanvasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanvasController.m; path = 3DTouch/CanvasController.m; sourceTree = "<group>"; };
 		4F46B82B1C10576200592459 /* PreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreviewController.h; path = CanvasController/PreviewController.h; sourceTree = "<group>"; };
 		4F46B82C1C10576200592459 /* PreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreviewController.m; path = CanvasController/PreviewController.m; sourceTree = "<group>"; };
+		4F46B8531C113B0E00592459 /* s5391_420.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = s5391_420.jpg; path = resource/s5391_420.jpg; sourceTree = "<group>"; };
 		4FF37EA41BFC68EA00CE87A5 /* ios9feature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios9feature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF37EA81BFC68EA00CE87A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4FF37EAA1BFC68EA00CE87A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,9 +63,18 @@
 			name = Preview;
 			sourceTree = "<group>";
 		};
+		4F46B8521C113AEE00592459 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				4F46B8531C113B0E00592459 /* s5391_420.jpg */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
 		4FF37E9B1BFC68EA00CE87A5 = {
 			isa = PBXGroup;
 			children = (
+				4F46B8521C113AEE00592459 /* resource */,
 				4FF37EA61BFC68EA00CE87A5 /* ios9feature */,
 				4FF37EA51BFC68EA00CE87A5 /* Products */,
 			);
@@ -176,6 +187,7 @@
 			files = (
 				4FF37EB71BFC68EA00CE87A5 /* LaunchScreen.storyboard in Resources */,
 				4FF37EB41BFC68EA00CE87A5 /* Assets.xcassets in Resources */,
+				4F46B8541C113B0E00592459 /* s5391_420.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
