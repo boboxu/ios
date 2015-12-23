@@ -82,6 +82,8 @@
         [alert show];
     }
 }
+- (IBAction)onClickSearchWristBand:(id)sender {
+}
 @end
 
 

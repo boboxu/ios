@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:tracktest/tracktest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LEBluetooth/LEBluetooth.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ios9feature/ios9feature.xcodeproj">
    </FileRef>
    <FileRef

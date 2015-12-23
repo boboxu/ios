@@ -10,5 +10,6 @@
 
 @interface ViewController : UITableViewController
 
+- (IBAction)onClickSearchWristBand:(id)sender;
 @end
 

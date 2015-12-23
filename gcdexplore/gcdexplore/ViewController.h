@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)onClickSearchWristBand:(id)sender;
 
 @end
 
